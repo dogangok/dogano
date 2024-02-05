@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*,
+/* *,
 *::before,
 *::after {
   box-sizing: border-box;
@@ -21,7 +21,7 @@
   border: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 /* @font-face {
   font-family: "Inter";
@@ -30,32 +30,34 @@
   src: url("assets/css/fonts/Inter.woff2") format("woff2");
 } */
 
-:root {
-  --c-bg: hsl(0, 0%, 100%);
-  --c-text: hsl(0, 0%, 10%);
-  --c-text-alt: hsl(0, 0%, 10%);
-  --c-detail: hsl(0, 0%, 90%);
-  --f-family: "Inter", sans-serif;
-  --f-size: 15px;
-  --f-height: 24px;
-  --f-weight: 400;
-  --f-scale-s: 0.87;
-  --f-scale-m: 1.2;
-  --f-scale-l: 1.47;
-  --l-wide: 39rem;
-  --l-text: 25rem;
-  --a-speed: 150ms;
-  --a-ease: ease-out;
-  font-size: var(--f-height);
-  font-family: var(--f-family);
-  font-weight: var(--f-weight);
-  background: var(--c-bg);
-  color: var(--c-text);
-  font-feature-settings:
-    "tnum" 1,
-    "case" 1,
-    "ss01" 1,
-    "ss03" 1;
+@layer base {
+  :root {
+    --c-bg: hsl(0, 0%, 100%);
+    --c-text: hsl(0, 0%, 10%);
+    --c-text-alt: hsl(0, 0%, 10%);
+    --c-detail: hsl(0, 0%, 90%);
+    --f-family: "Inter", sans-serif;
+    --f-size: 15px;
+    --f-height: 24px;
+    --f-weight: 400;
+    --f-scale-s: 0.87;
+    --f-scale-m: 1.2;
+    --f-scale-l: 1.47;
+    --l-wide: 39rem;
+    --l-text: 25rem;
+    --a-speed: 150ms;
+    --a-ease: ease-out;
+    font-size: var(--f-height);
+    font-family: var(--f-family);
+    font-weight: var(--f-weight);
+    background: var(--c-bg);
+    color: var(--c-text);
+    font-feature-settings:
+      "tnum" 1,
+      "case" 1,
+      "ss01" 1,
+      "ss03" 1;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -66,13 +68,12 @@
     --c-detail: hsl(0, 0%, 20%);
   }
 }
-
 ::selection {
   color: var(--c-text-alt);
   background: var(--c-detail);
 }
 
-html.inverted {
+/* html.inverted {
   --c-bg: hsl(0, 0%, 10%);
   --c-text: hsl(0, 0%, 100%);
   --c-text-alt: hsl(0, 0%, 90%);
@@ -86,7 +87,7 @@ html.inverted {
     --c-text-alt: hsl(0, 0%, 10%);
     --c-detail: hsl(0, 0%, 90%);
   }
-}
+} */
 
 *,
 ::after,

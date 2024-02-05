@@ -9,7 +9,7 @@ import { Newsletter } from "@/components/Footer/Newsletter"
 import { Sponsors } from "@/components/Footer/Sponsors"
 
 export const metadata: Metadata = {
-  title: "Theme",
+  title: "dogano",
   description: "Skyborn"
 }
 
