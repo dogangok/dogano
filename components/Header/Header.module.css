@@ -1,0 +1,55 @@
+.themesvg {
+  order: 1;
+  grid-column: 1 / 2;
+  cursor: pointer;
+  grid-row: 1;
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  position: relative;
+  fill: var(--text);
+  .themesvg:after {
+    left: 1.5rem;
+    transform: translateX(0.5rem);
+    content: "Dark";
+  }
+  & .inverted {
+    .svg:after {
+      content: "Light";
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .themesvg:after {
+      content: "Light";
+    }
+    & .inverted {
+      content: "Dark";
+    }
+  }
+  .themesvg:hover .inner {
+    transform: scale(0);
+  }
+  & .inner {
+    transition: transform 200ms ease-out;
+    transform-origin: 10px;
+    fill: var(--bckg);
+  }
+}
+
+.searchsvg {
+  order: 3;
+  grid-column: 3 /4;
+  cursor: pointer;
+  grid-row: 1;
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  position: relative;
+  .searchsvg &:after {
+    content: "Search";
+    right: 1.5rem;
+    transform: translateX(-0.5rem);
+  }
+  /* background-color: blue; */
+  fill: var(--text);
+}
